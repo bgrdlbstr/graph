@@ -22,15 +22,7 @@ import static junit.framework.TestCase.assertEquals;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class SimpleGridGraphSearchBreadthFirstTest {
-
-    //        final SimpleGraph simpleGraph2 = new GridGraphBuilder(50, 10).build();
-//        final IGraphSearch graphSearch2 = new GraphSearchBreadthFirst(simpleGraph2);
-//
-//        final IGraphNode graphNode7 = new GridGraphNode(new GraphNode("7"));
-//        graphSearch2.search(simpleGraph2.edges.get(graphNode7).asList().get(0));
-//
-//    }
+public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearch() {

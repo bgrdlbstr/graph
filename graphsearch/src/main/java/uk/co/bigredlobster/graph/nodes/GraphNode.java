@@ -1,20 +1,31 @@
 package uk.co.bigredlobster.graph.nodes;
 
-import com.google.common.collect.Sets;
+import com.google.common.collect.ImmutableSet;
 
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Set;
 
-public class GraphNode {
+public class GraphNode implements IGraphNode {
 
-    private final Set<GraphNode> neighbours;
-    private final String name;
+    public final ImmutableSet<IGraphNode> neighbours;
+    public final String name;
 
-    public GraphNode(final String name, final GraphNode... neighbours) {
+    public GraphNode(final String name, final IGraphNode... neighbours) {
         this.name = name;
-        this.neighbours = Sets.newHashSet(neighbours);
+        this.neighbours = ImmutableSet.copyOf(neighbours);
     }
+
+    @Override
+    public Set<IGraphNode> getNeighbours() {
+        return neighbours;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
 
     @Override
     public String toString() {

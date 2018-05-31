@@ -2,19 +2,23 @@ package uk.co.bigredlobster.graph;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import uk.co.bigredlobster.graph.nodes.GraphNode;
+import uk.co.bigredlobster.graph.nodes.IGraphNode;
 
 import java.util.Objects;
 
 public class SimpleGraph {
-    public final ImmutableMap<GraphNode, ImmutableSet<GraphNode>> edges;
+    public final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges;
 
-    SimpleGraph(final ImmutableMap<GraphNode, ImmutableSet<GraphNode>> edges) {
+    SimpleGraph(final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges) {
         this.edges = edges;
     }
 
-    public ImmutableSet<GraphNode> neighbours(final GraphNode current) {
+    public ImmutableSet<IGraphNode> neighbours(final IGraphNode current) {
         return edges.get(current);
+    }
+
+    public IGraphNode getEdge(final IGraphNode current) {
+        return edges.get(current).asList().get(0);
     }
 
     @Override

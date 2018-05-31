@@ -3,15 +3,17 @@ package uk.co.bigredlobster.graph;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import uk.co.bigredlobster.graph.nodes.GraphNode;
+import uk.co.bigredlobster.graph.nodes.IGraphNode;
+import uk.co.bigredlobster.graph.nodes.INodeFactory;
 import uk.co.bigredlobster.graph.nodes.NodeFactory;
 
 public class SimpleGraphBuilder {
 
-    private final NodeFactory factory = new NodeFactory();
+    private final INodeFactory factory = new NodeFactory();
 
     public SimpleGraph build() {
 
-        final ImmutableMap.Builder<GraphNode, ImmutableSet<GraphNode>> builder = ImmutableMap.builder();
+        final ImmutableMap.Builder<IGraphNode, ImmutableSet<IGraphNode>> builder = ImmutableMap.builder();
 
         buildTopRow(0, builder);
 
@@ -30,7 +32,7 @@ public class SimpleGraphBuilder {
     }
 
     @SuppressWarnings("SameParameterValue")
-    private void buildTopRow(int seed, ImmutableMap.Builder<GraphNode, ImmutableSet<GraphNode>> builder) {
+    private void buildTopRow(int seed, ImmutableMap.Builder<IGraphNode, ImmutableSet<IGraphNode>> builder) {
         int nodeName = seed;
 
         builder.put(factory.createOrGet(new GraphNode(++nodeName + "")), ImmutableSet.of(
@@ -74,7 +76,7 @@ public class SimpleGraphBuilder {
     }
 
     @SuppressWarnings("SameParameterValue")
-    private void buildBottomRow(int seed, ImmutableMap.Builder<GraphNode, ImmutableSet<GraphNode>> builder) {
+    private void buildBottomRow(int seed, ImmutableMap.Builder<IGraphNode, ImmutableSet<IGraphNode>> builder) {
         int nodeName = seed;
         builder.put(factory.createOrGet(new GraphNode(++nodeName + "")), ImmutableSet.of(
                 factory.createOrGet(new GraphNode(nodeName - 10 + "")),
@@ -117,7 +119,7 @@ public class SimpleGraphBuilder {
 
     }
 
-    private void buildMiddleRow(int seed, ImmutableMap.Builder<GraphNode, ImmutableSet<GraphNode>> builder) {
+    private void buildMiddleRow(int seed, ImmutableMap.Builder<IGraphNode, ImmutableSet<IGraphNode>> builder) {
         int nodeName = seed;
         builder.put(factory.createOrGet(new GraphNode(++nodeName + "")), ImmutableSet.of(
                 factory.createOrGet(new GraphNode(nodeName - 10 + "")),

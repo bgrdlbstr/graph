@@ -3,18 +3,18 @@ package uk.co.bigredlobster.graph.nodes;
 import java.util.LinkedList;
 import java.util.List;
 
-public class NodeFactory {
+public class NodeFactory implements INodeFactory {
 
-    private final List<GraphNode> nodes;
+    private final List<IGraphNode> nodes;
 
     public NodeFactory() {
         nodes = new LinkedList<>();
     }
 
-    public GraphNode createOrGet(GraphNode node) {
-        if(!nodes.contains(node)) {
+    @Override
+    public IGraphNode createOrGet(IGraphNode node) {
+        if(!nodes.contains(node))
             nodes.add(node);
-        }
         return node;
     }
 

@@ -3,7 +3,6 @@ package uk.co.bigredlobster.graph;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import uk.co.bigredlobster.graph.builders.GridGraphBuilder;
-import uk.co.bigredlobster.graph.builders.SimpleGraphBuilder;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.graph.nodes.basic.GraphNode;
 import uk.co.bigredlobster.graph.nodes.grid.GridGraphNode;
@@ -43,9 +42,9 @@ public class GridGraphSearchBreadthFirstTest {
         final IGraphNode iGraphNode2 = iGraphNodes.get(1);
         final IGraphNode iGraphNode3 = iGraphNodes.get(2);
 
-        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("2"), new PositionX(2) ,new PositionY(0))));
-        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("4"), new PositionX(4) ,new PositionY(0))));
-        assertThat(iGraphNode3, is(new GridGraphNode(new GraphNode("53"), new PositionX(12) ,new PositionY(1))));
+        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("2"), new PositionX(2), new PositionY(0))));
+        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("4"), new PositionX(4), new PositionY(0))));
+        assertThat(iGraphNode3, is(new GridGraphNode(new GraphNode("53"), new PositionX(12), new PositionY(1))));
 
         assertThat(visited.containsKey(iGraphNode), is(true));
         assertThat(visited.containsKey(iGraphNode2), is(true));
@@ -82,8 +81,8 @@ public class GridGraphSearchBreadthFirstTest {
         final IGraphNode iGraphNode = iGraphNodes.get(0);
         final IGraphNode iGraphNode2 = iGraphNodes.get(1);
 
-        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("1"), new PositionX(1) ,new PositionY(0))));
-        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("50"), new PositionX(0) ,new PositionY(1))));
+        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("1"), new PositionX(1), new PositionY(0))));
+        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("50"), new PositionX(0), new PositionY(1))));
 
         assertThat(visited.containsKey(iGraphNode), is(true));
         assertThat(visited.containsKey(iGraphNode2), is(true));
@@ -115,8 +114,8 @@ public class GridGraphSearchBreadthFirstTest {
         final IGraphNode iGraphNode = iGraphNodes.get(0);
         final IGraphNode iGraphNode2 = iGraphNodes.get(1);
 
-        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("48"), new PositionX(48) ,new PositionY(0))));
-        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("99"), new PositionX(49) ,new PositionY(1))));
+        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("48"), new PositionX(48), new PositionY(0))));
+        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("99"), new PositionX(49), new PositionY(1))));
 
         assertThat(visited.containsKey(iGraphNode), is(true));
         assertThat(visited.containsKey(iGraphNode2), is(true));
@@ -150,10 +149,10 @@ public class GridGraphSearchBreadthFirstTest {
         final IGraphNode iGraphNode3 = iGraphNodes.get(2);
         final IGraphNode iGraphNode4 = iGraphNodes.get(3);
 
-        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("81"), new PositionX(31) ,new PositionY(1))));
-        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("83"), new PositionX(33) ,new PositionY(1))));
-        assertThat(iGraphNode3, is(new GridGraphNode(new GraphNode("32"), new PositionX(32) ,new PositionY(0))));
-        assertThat(iGraphNode4, is(new GridGraphNode(new GraphNode("132"), new PositionX(32) ,new PositionY(2))));
+        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("81"), new PositionX(31), new PositionY(1))));
+        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("83"), new PositionX(33), new PositionY(1))));
+        assertThat(iGraphNode3, is(new GridGraphNode(new GraphNode("32"), new PositionX(32), new PositionY(0))));
+        assertThat(iGraphNode4, is(new GridGraphNode(new GraphNode("132"), new PositionX(32), new PositionY(2))));
 
         assertThat(visited.containsKey(iGraphNode), is(true));
         assertThat(visited.containsKey(iGraphNode2), is(true));
@@ -195,8 +194,8 @@ public class GridGraphSearchBreadthFirstTest {
         final IGraphNode iGraphNode = iGraphNodes.get(0);
         final IGraphNode iGraphNode1 = iGraphNodes.get(1);
 
-        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("451"), new PositionX(1) ,new PositionY(9))));
-        assertThat(iGraphNode1, is(new GridGraphNode(new GraphNode("400"), new PositionX(0) ,new PositionY(8))));
+        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("451"), new PositionX(1), new PositionY(9))));
+        assertThat(iGraphNode1, is(new GridGraphNode(new GraphNode("400"), new PositionX(0), new PositionY(8))));
 
         assertThat(visited.containsKey(iGraphNode), is(true));
         assertThat(visited.containsKey(iGraphNode1), is(true));
@@ -228,8 +227,8 @@ public class GridGraphSearchBreadthFirstTest {
         final IGraphNode iGraphNode = iGraphNodes.get(0);
         final IGraphNode iGraphNode2 = iGraphNodes.get(1);
 
-        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("498"), new PositionX(48) ,new PositionY(9))));
-        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("449"), new PositionX(49) ,new PositionY(8))));
+        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("498"), new PositionX(48), new PositionY(9))));
+        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("449"), new PositionX(49), new PositionY(8))));
 
         assertThat(visited.containsKey(iGraphNode), is(true));
         assertThat(visited.containsKey(iGraphNode2), is(true));
@@ -262,9 +261,9 @@ public class GridGraphSearchBreadthFirstTest {
         final IGraphNode iGraphNode2 = iGraphNodes.get(1);
         final IGraphNode iGraphNode3 = iGraphNodes.get(2);
 
-        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("474"), new PositionX(25) ,new PositionY(9))));
-        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("476"), new PositionX(27) ,new PositionY(9))));
-        assertThat(iGraphNode3, is(new GridGraphNode(new GraphNode("425"), new PositionX(26) ,new PositionY(8))));
+        assertThat(iGraphNode, is(new GridGraphNode(new GraphNode("474"), new PositionX(25), new PositionY(9))));
+        assertThat(iGraphNode2, is(new GridGraphNode(new GraphNode("476"), new PositionX(27), new PositionY(9))));
+        assertThat(iGraphNode3, is(new GridGraphNode(new GraphNode("425"), new PositionX(26), new PositionY(8))));
 
         assertThat(visited.containsKey(iGraphNode), is(true));
         assertThat(visited.containsKey(iGraphNode2), is(true));

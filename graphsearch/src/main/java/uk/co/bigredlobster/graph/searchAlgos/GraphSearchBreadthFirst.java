@@ -1,5 +1,6 @@
 package uk.co.bigredlobster.graph.searchAlgos;
 
+import uk.co.bigredlobster.graph.IGraph;
 import uk.co.bigredlobster.graph.SimpleGraph;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.microtypes.HasVisited;
@@ -13,9 +14,9 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 public class GraphSearchBreadthFirst implements IGraphSearch {
 
-    private final SimpleGraph simpleGraph;
+    private final IGraph simpleGraph;
 
-    public GraphSearchBreadthFirst(SimpleGraph simpleGraph) {
+    public GraphSearchBreadthFirst(final IGraph simpleGraph) {
         this.simpleGraph = simpleGraph;
     }
 

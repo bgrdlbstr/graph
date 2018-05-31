@@ -6,10 +6,10 @@ import uk.co.bigredlobster.graph.nodes.IGraphNode;
 
 import java.util.Objects;
 
-public class SimpleGraph implements IGraph {
-    private final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges;
+public class GridGraph implements IGraph {
+    final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges;
 
-    public SimpleGraph(final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges) {
+    public GridGraph(final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges) {
         this.edges = edges;
     }
 
@@ -25,7 +25,7 @@ public class SimpleGraph implements IGraph {
 
     @Override
     public String toString() {
-        return "SimpleGraph{" +
+        return "GridGraph{" +
                 "edges=" + edges +
                 '}';
     }
@@ -34,7 +34,7 @@ public class SimpleGraph implements IGraph {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        SimpleGraph that = (SimpleGraph) o;
+        GridGraph that = (GridGraph) o;
         return Objects.equals(edges, that.edges);
     }
 

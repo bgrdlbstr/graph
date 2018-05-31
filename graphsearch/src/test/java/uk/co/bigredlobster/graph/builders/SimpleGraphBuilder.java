@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import uk.co.bigredlobster.graph.SimpleGraph;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
-import uk.co.bigredlobster.graph.nodes.basic.GraphNode;
+import uk.co.bigredlobster.graph.nodes.GraphNode;
 import uk.co.bigredlobster.graph.nodes.factory.INodeFactory;
 import uk.co.bigredlobster.graph.nodes.factory.NodeFactory;
 import uk.co.bigredlobster.microtypes.NodeName;

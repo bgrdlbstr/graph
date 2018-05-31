@@ -1,7 +1,6 @@
-package uk.co.bigredlobster.graph.nodes.basic;
+package uk.co.bigredlobster.graph.nodes;
 
 import com.google.common.collect.ImmutableSet;
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.microtypes.NodeName;
 
 import java.util.Arrays;

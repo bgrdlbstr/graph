@@ -4,8 +4,8 @@ import com.google.common.collect.Lists;
 import org.junit.Test;
 import uk.co.bigredlobster.graph.builders.GridGraphBuilder;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
-import uk.co.bigredlobster.graph.nodes.basic.GraphNode;
-import uk.co.bigredlobster.graph.nodes.grid.GridGraphNode;
+import uk.co.bigredlobster.graph.nodes.GraphNode;
+import uk.co.bigredlobster.graph.nodes.GridGraphNode;
 import uk.co.bigredlobster.graph.searchAlgos.GraphSearchBreadthFirst;
 import uk.co.bigredlobster.graph.searchAlgos.IGraphSearch;
 import uk.co.bigredlobster.microtypes.*;
@@ -22,14 +22,14 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchTopRowNode() {
-        final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node3 = new GridGraphNode(new GraphNode(new NodeName("3")));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node3);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(node3);
         assertThat(neighbours.size(), is(3));
@@ -62,14 +62,14 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchTopLeftCornerNode() {
-        final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node0 = new GridGraphNode(new GraphNode(new NodeName("0")));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node0);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(node0);
         assertThat(neighbours.size(), is(2));
@@ -95,14 +95,14 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchTopRightCornerNode() {
-        final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node49 = new GridGraphNode(new GraphNode(new NodeName("49")));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node49);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(node49);
         assertThat(neighbours.size(), is(2));
@@ -128,14 +128,14 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchMiddleRowNode() {
-        final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node82 = new GridGraphNode(new GraphNode(new NodeName("82")));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node82);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(node82);
         assertThat(neighbours.size(), is(4));
@@ -175,14 +175,14 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchBottomLeftCornerNode() {
-        final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node450 = new GridGraphNode(new GraphNode(new NodeName("450")));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node450);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(node450);
         assertThat(neighbours.size(), is(2));
@@ -208,14 +208,14 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchBottomRightCornerNode() {
-        final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node499 = new GridGraphNode(new GraphNode(new NodeName("499")));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node499);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(node499);
         assertThat(neighbours.size(), is(2));
@@ -241,14 +241,14 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchBottomRowNode() {
-        final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node475 = new GridGraphNode(new GraphNode(new NodeName("475")));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node475);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(node475);
         assertThat(neighbours.size(), is(3));

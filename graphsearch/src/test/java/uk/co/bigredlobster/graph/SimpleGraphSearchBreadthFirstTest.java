@@ -4,7 +4,7 @@ import com.google.common.collect.Lists;
 import org.junit.Test;
 import uk.co.bigredlobster.graph.builders.SimpleGraphBuilder;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
-import uk.co.bigredlobster.graph.nodes.basic.GraphNode;
+import uk.co.bigredlobster.graph.nodes.GraphNode;
 import uk.co.bigredlobster.graph.searchAlgos.GraphSearchBreadthFirst;
 import uk.co.bigredlobster.graph.searchAlgos.IGraphSearch;
 import uk.co.bigredlobster.microtypes.HasVisitedAndWhen;
@@ -28,8 +28,8 @@ public class SimpleGraphSearchBreadthFirstTest {
         final IGraphNode nodeA = new GraphNode(new NodeName("A"));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(nodeA);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(nodeA);
         assertThat(neighbours.size(), is(1));
@@ -53,8 +53,8 @@ public class SimpleGraphSearchBreadthFirstTest {
         final IGraphNode nodeB = new GraphNode(new NodeName("B"));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(nodeB);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(nodeB);
         assertThat(neighbours.size(), is(3));
@@ -92,8 +92,8 @@ public class SimpleGraphSearchBreadthFirstTest {
         final IGraphNode nodeC = new GraphNode(new NodeName("C"));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(nodeC);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(nodeC);
         assertThat(neighbours.size(), is(3));
@@ -131,8 +131,8 @@ public class SimpleGraphSearchBreadthFirstTest {
         final IGraphNode nodeD = new GraphNode(new NodeName("D"));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(nodeD);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(nodeD);
         assertThat(neighbours.size(), is(2));
@@ -163,8 +163,8 @@ public class SimpleGraphSearchBreadthFirstTest {
         final IGraphNode nodeD = new GraphNode(new NodeName("E"));
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(nodeD);
 
-        assertThat(visited.size(), is(simpleGraph.edges.size()));
-        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
+        assertThat(visited.size(), is(simpleGraph.edges().size()));
+        assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges().size()));
 
         final Set<IGraphNode> neighbours = simpleGraph.neighbours(nodeD);
         assertThat(neighbours.size(), is(1));

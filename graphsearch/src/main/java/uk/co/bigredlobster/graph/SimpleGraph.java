@@ -7,7 +7,7 @@ import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import java.util.Objects;
 
 public class SimpleGraph {
-    public final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges;
+    final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges;
 
     public SimpleGraph(final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges) {
         this.edges = edges;
@@ -15,10 +15,6 @@ public class SimpleGraph {
 
     public ImmutableSet<IGraphNode> neighbours(final IGraphNode current) {
         return edges.get(current);
-    }
-
-    public IGraphNode getEdge(final IGraphNode current) {
-        return edges.get(current).asList().get(0);
     }
 
     @Override

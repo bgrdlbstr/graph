@@ -1,7 +1,6 @@
 package uk.co.bigredlobster.graph;
 
 import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import org.junit.Test;
 import uk.co.bigredlobster.graph.graphs.GraphFactory;
@@ -10,14 +9,14 @@ import uk.co.bigredlobster.graph.nodes.GraphNode;
 import uk.co.bigredlobster.graph.nodes.GridGraphNode;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.graph.searchAlgos.GraphSearchBreadthFirst;
-import uk.co.bigredlobster.microtypes.*;
+import uk.co.bigredlobster.microtypes.HasVisitedAndWhen;
+import uk.co.bigredlobster.microtypes.NodeName;
+import uk.co.bigredlobster.microtypes.WallPosition;
 
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static junit.framework.TestCase.assertEquals;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static uk.co.bigredlobster.graph.TestWalls.walls1;

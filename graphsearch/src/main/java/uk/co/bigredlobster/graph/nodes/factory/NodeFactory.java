@@ -1,4 +1,6 @@
-package uk.co.bigredlobster.graph.nodes;
+package uk.co.bigredlobster.graph.nodes.factory;
+
+import uk.co.bigredlobster.graph.nodes.IGraphNode;
 
 import java.util.LinkedList;
 import java.util.List;

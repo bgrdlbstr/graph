@@ -1,10 +1,6 @@
 package uk.co.bigredlobster.graph.searchAlgos;
 
-import uk.co.bigredlobster.graph.GridGraphBuilder;
 import uk.co.bigredlobster.graph.SimpleGraph;
-import uk.co.bigredlobster.graph.SimpleGraphBuilder;
-import uk.co.bigredlobster.graph.nodes.GraphNode;
-import uk.co.bigredlobster.graph.nodes.GridGraphNode;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.microtypes.HasVisited;
 import uk.co.bigredlobster.microtypes.HasVisitedAndWhen;
@@ -21,19 +17,6 @@ public class GraphSearchBreadthFirst implements IGraphSearch {
 
     public GraphSearchBreadthFirst(SimpleGraph simpleGraph) {
         this.simpleGraph = simpleGraph;
-    }
-
-    public static void main(String[] args) {
-        final SimpleGraph simpleGraph = new SimpleGraphBuilder().build();
-        final IGraphSearch graphSearch = new GraphSearchBreadthFirst(simpleGraph);
-        graphSearch.search(simpleGraph.edges.get(new GraphNode("4")).asList().get(0));
-
-        final SimpleGraph simpleGraph2 = new GridGraphBuilder(50, 10).build();
-        final IGraphSearch graphSearch2 = new GraphSearchBreadthFirst(simpleGraph2);
-
-        final IGraphNode graphNode7 = new GridGraphNode(new GraphNode("7"));
-        graphSearch2.search(simpleGraph2.edges.get(graphNode7).asList().get(0));
-
     }
 
     @Override

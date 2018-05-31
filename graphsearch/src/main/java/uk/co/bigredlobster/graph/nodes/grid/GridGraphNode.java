@@ -1,5 +1,6 @@
-package uk.co.bigredlobster.graph.nodes;
+package uk.co.bigredlobster.graph.nodes.grid;
 
+import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;
 

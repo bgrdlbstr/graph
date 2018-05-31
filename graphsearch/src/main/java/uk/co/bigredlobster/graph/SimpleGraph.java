@@ -9,7 +9,7 @@ import java.util.Objects;
 public class SimpleGraph {
     public final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges;
 
-    SimpleGraph(final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges) {
+    public SimpleGraph(final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges) {
         this.edges = edges;
     }
 

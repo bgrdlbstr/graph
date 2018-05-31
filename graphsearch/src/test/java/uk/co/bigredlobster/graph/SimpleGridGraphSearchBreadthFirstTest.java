@@ -37,13 +37,13 @@ public class SimpleGridGraphSearchBreadthFirstTest {
         final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
-        final IGraphNode edge4 = simpleGraph.getEdge(new GridGraphNode(new GraphNode("4")));
-        final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(edge4);
+        final IGraphNode node3 = new GridGraphNode(new GraphNode("3"));
+        final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node3);
 
         assertThat(visited.size(), is(simpleGraph.edges.size()));
         assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
 
-        final Set<IGraphNode> neighbours = simpleGraph.neighbours(edge4);
+        final Set<IGraphNode> neighbours = simpleGraph.neighbours(node3);
         assertThat(neighbours.size(), is(3));
 
         final ArrayList<IGraphNode> iGraphNodes = Lists.newArrayList(neighbours);
@@ -77,13 +77,13 @@ public class SimpleGridGraphSearchBreadthFirstTest {
         final SimpleGraph simpleGraph = new GridGraphBuilder(50, 10).build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
-        final IGraphNode edge83 = simpleGraph.getEdge(new GridGraphNode(new GraphNode("83")));
-        final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(edge83);
+        final IGraphNode node82 = new GridGraphNode(new GraphNode("82"));
+        final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(node82);
 
         assertThat(visited.size(), is(simpleGraph.edges.size()));
         assertThat(visited.values().stream().filter(x -> x.hasVisited.value).count(), is((long) simpleGraph.edges.size()));
 
-        final Set<IGraphNode> neighbours = simpleGraph.neighbours(edge83);
+        final Set<IGraphNode> neighbours = simpleGraph.neighbours(node82);
         assertThat(neighbours.size(), is(4));
 
         final ArrayList<IGraphNode> iGraphNodes = Lists.newArrayList(neighbours);

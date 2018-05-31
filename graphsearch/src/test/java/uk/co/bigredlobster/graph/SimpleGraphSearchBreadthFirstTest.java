@@ -25,7 +25,7 @@ public class SimpleGraphSearchBreadthFirstTest {
         final SimpleGraph simpleGraph = new SimpleGraphBuilder().build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
-        final IGraphNode edge4 = simpleGraph.getEdge(new GraphNode("4"));
+        final IGraphNode edge4 = new GraphNode("4");
         final Map<IGraphNode, HasVisitedAndWhen> visited = search.search(edge4);
 
         assertThat(visited.size(), is(simpleGraph.edges.size()));

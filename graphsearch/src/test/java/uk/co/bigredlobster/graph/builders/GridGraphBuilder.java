@@ -8,6 +8,7 @@ import uk.co.bigredlobster.graph.nodes.basic.GraphNode;
 import uk.co.bigredlobster.graph.nodes.factory.INodeFactory;
 import uk.co.bigredlobster.graph.nodes.factory.NodeFactory;
 import uk.co.bigredlobster.graph.nodes.grid.GridGraphNode;
+import uk.co.bigredlobster.microtypes.NodeName;
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;
 
@@ -34,24 +35,24 @@ public class GridGraphBuilder {
             for (int x = 0; x < width; x++) {
                 ImmutableSet.Builder<IGraphNode> possibleNeighbours = ImmutableSet.builder();
                 if (inBounds(x - 1, y)) {
-                    final IGraphNode newNode = new GridGraphNode(new GraphNode(getNodeName(x - 1, y) + ""), new PositionX(x - 1), new PositionY(y));
+                    final IGraphNode newNode = new GridGraphNode(new GraphNode(getNodeName(x - 1, y)), new PositionX(x - 1), new PositionY(y));
                     possibleNeighbours.add(factory.createOrGet(newNode));
                 }
                 if (inBounds(x + 1, y)) {
-                    final IGraphNode newNode = new GridGraphNode(new GraphNode(getNodeName(x + 1, y) + ""), new PositionX(x + 1), new PositionY(y));
+                    final IGraphNode newNode = new GridGraphNode(new GraphNode(getNodeName(x + 1, y)), new PositionX(x + 1), new PositionY(y));
                     possibleNeighbours.add(factory.createOrGet(newNode));
                 }
                 if (inBounds(x, y - 1)) {
-                    final IGraphNode newNode = new GridGraphNode(new GraphNode(getNodeName(x, y - 1) + ""), new PositionX(x), new PositionY(y - 1));
+                    final IGraphNode newNode = new GridGraphNode(new GraphNode(getNodeName(x, y - 1)), new PositionX(x), new PositionY(y - 1));
                     possibleNeighbours.add(factory.createOrGet(newNode));
                 }
                 if (inBounds(x, y + 1)) {
-                    final IGraphNode newNode = new GridGraphNode(new GraphNode(getNodeName(x, y + 1) + ""), new PositionX(x), new PositionY(y + 1));
+                    final IGraphNode newNode = new GridGraphNode(new GraphNode(getNodeName(x, y + 1)), new PositionX(x), new PositionY(y + 1));
                     possibleNeighbours.add(factory.createOrGet(newNode));
                 }
                 builder.put(
                         new GridGraphNode(
-                                new GraphNode(nodeName + ""),
+                                new GraphNode(new NodeName(nodeName + "")),
                                 new PositionX(x),
                                 new PositionY(y)),
                         possibleNeighbours.build()
@@ -68,7 +69,7 @@ public class GridGraphBuilder {
         return new SimpleGraph(builder.build());
     }
 
-    private String getNodeName(int x, int y) {
-        return y * width + x + "";
+    private NodeName getNodeName(int x, int y) {
+        return new NodeName(y * width + x + "");
     }
 }

@@ -2,6 +2,7 @@ package uk.co.bigredlobster.graph.nodes.basic;
 
 import com.google.common.collect.ImmutableSet;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
+import uk.co.bigredlobster.microtypes.NodeName;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -9,10 +10,10 @@ import java.util.Set;
 
 public class GraphNode implements IGraphNode {
 
-    public final ImmutableSet<IGraphNode> neighbours;
-    public final String name;
+    private final ImmutableSet<IGraphNode> neighbours;
+    private final NodeName name;
 
-    public GraphNode(final String name, final IGraphNode... neighbours) {
+    public GraphNode(final NodeName name, final IGraphNode... neighbours) {
         this.name = name;
         this.neighbours = ImmutableSet.copyOf(neighbours);
     }
@@ -23,7 +24,7 @@ public class GraphNode implements IGraphNode {
     }
 
     @Override
-    public String getName() {
+    public NodeName getName() {
         return name;
     }
 

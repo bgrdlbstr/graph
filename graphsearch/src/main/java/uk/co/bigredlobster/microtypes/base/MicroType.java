@@ -2,11 +2,13 @@ package uk.co.bigredlobster.microtypes.base;
 
 import java.util.Objects;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 public abstract class MicroType<T> {
     public final T value;
 
     MicroType(T value) {
-        this.value = value;
+        this.value = checkNotNull(value);
     }
 
     @Override

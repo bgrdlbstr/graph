@@ -1,6 +1,7 @@
 package uk.co.bigredlobster.graph.nodes.grid;
 
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
+import uk.co.bigredlobster.microtypes.NodeName;
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;
 
@@ -9,9 +10,9 @@ import java.util.Set;
 
 public class GridGraphNode implements IGraphNode {
 
-    public final IGraphNode graphNode;
-    public final PositionX x;
-    public final PositionY y;
+    private final IGraphNode graphNode;
+    private final PositionX x;
+    private final PositionY y;
 
     public GridGraphNode(final IGraphNode graphNode, final PositionX x, final PositionY y) {
         this.graphNode = graphNode;
@@ -54,7 +55,7 @@ public class GridGraphNode implements IGraphNode {
     }
 
     @Override
-    public String getName() {
+    public NodeName getName() {
         return graphNode.getName();
     }
 }

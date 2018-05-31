@@ -1,8 +1,7 @@
-package uk.co.bigredlobster.graph.builders;
+package uk.co.bigredlobster.graph.graphs;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import uk.co.bigredlobster.graph.GridGraph;
 import uk.co.bigredlobster.graph.IGraph;
 import uk.co.bigredlobster.graph.nodes.GraphNode;
 import uk.co.bigredlobster.graph.nodes.GridGraphNode;
@@ -13,21 +12,20 @@ import uk.co.bigredlobster.microtypes.NodeName;
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;
 
-public class GridGraphBuilder {
-
+public abstract class BuilderBase implements IGraphBuilderBoundsChecker {
+    final int width;
+    final int height;
     private final INodeFactory factory = new NodeFactory();
-    private final int width;
-    private final int height;
 
-    public GridGraphBuilder(final int width, final int height) {
+    BuilderBase(final int width, final int height) {
         this.width = width;
         this.height = height;
     }
 
-    private boolean inBounds(final int x, final int y) {
-        return x >= 0 && x < width && y >= 0 && y < height;
-    }
+    @Override
+    public abstract boolean inBounds(int x, int y);
 
+    @Override
     public IGraph build() {
         final ImmutableMap.Builder<IGraphNode, ImmutableSet<IGraphNode>> builder = ImmutableMap.builder();
 
@@ -67,7 +65,11 @@ public class GridGraphBuilder {
             }
         }
 
-        return new GridGraph(builder.build());
+        return new GridGraph(
+                new SimpleGraph(
+                        builder.build()
+                )
+        );
     }
 
     private NodeName getNodeName(int x, int y) {

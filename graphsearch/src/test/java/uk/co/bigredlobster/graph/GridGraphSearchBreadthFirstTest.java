@@ -2,12 +2,12 @@ package uk.co.bigredlobster.graph;
 
 import com.google.common.collect.Lists;
 import org.junit.Test;
-import uk.co.bigredlobster.graph.builders.GridGraphBuilder;
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
+import uk.co.bigredlobster.graph.graphs.GraphFactory;
+import uk.co.bigredlobster.graph.graphs.IGraphSearch;
 import uk.co.bigredlobster.graph.nodes.GraphNode;
 import uk.co.bigredlobster.graph.nodes.GridGraphNode;
+import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.graph.searchAlgos.GraphSearchBreadthFirst;
-import uk.co.bigredlobster.graph.searchAlgos.IGraphSearch;
 import uk.co.bigredlobster.microtypes.*;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchTopRowNode() {
-        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = GraphFactory.getGridGraph(50, 10);
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node3 = new GridGraphNode(new GraphNode(new NodeName("3")));
@@ -62,7 +62,7 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchTopLeftCornerNode() {
-        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = GraphFactory.getGridGraph(50, 10);
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node0 = new GridGraphNode(new GraphNode(new NodeName("0")));
@@ -95,7 +95,7 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchTopRightCornerNode() {
-        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = GraphFactory.getGridGraph(50, 10);
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node49 = new GridGraphNode(new GraphNode(new NodeName("49")));
@@ -128,7 +128,7 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchMiddleRowNode() {
-        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = GraphFactory.getGridGraph(50, 10);
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node82 = new GridGraphNode(new GraphNode(new NodeName("82")));
@@ -175,7 +175,7 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchBottomLeftCornerNode() {
-        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = GraphFactory.getGridGraph(50, 10);
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node450 = new GridGraphNode(new GraphNode(new NodeName("450")));
@@ -208,7 +208,7 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchBottomRightCornerNode() {
-        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = GraphFactory.getGridGraph(50, 10);
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node499 = new GridGraphNode(new GraphNode(new NodeName("499")));
@@ -241,7 +241,7 @@ public class GridGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchBottomRowNode() {
-        final IGraph simpleGraph = new GridGraphBuilder(50, 10).build();
+        final IGraph simpleGraph = GraphFactory.getGridGraph(50, 10);
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode node475 = new GridGraphNode(new GraphNode(new NodeName("475")));

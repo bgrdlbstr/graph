@@ -1,7 +1,7 @@
 package uk.co.bigredlobster.graph.searchAlgos;
 
 import uk.co.bigredlobster.graph.IGraph;
-import uk.co.bigredlobster.graph.SimpleGraph;
+import uk.co.bigredlobster.graph.graphs.IGraphSearch;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.microtypes.HasVisited;
 import uk.co.bigredlobster.microtypes.HasVisitedAndWhen;

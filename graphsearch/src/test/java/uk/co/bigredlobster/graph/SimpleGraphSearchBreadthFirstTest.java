@@ -3,10 +3,11 @@ package uk.co.bigredlobster.graph;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import uk.co.bigredlobster.graph.builders.SimpleGraphBuilder;
+import uk.co.bigredlobster.graph.graphs.SimpleGraph;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.graph.nodes.GraphNode;
 import uk.co.bigredlobster.graph.searchAlgos.GraphSearchBreadthFirst;
-import uk.co.bigredlobster.graph.searchAlgos.IGraphSearch;
+import uk.co.bigredlobster.graph.graphs.IGraphSearch;
 import uk.co.bigredlobster.microtypes.HasVisitedAndWhen;
 import uk.co.bigredlobster.microtypes.NodeName;
 import uk.co.bigredlobster.microtypes.WhenVisited;
@@ -22,7 +23,7 @@ public class SimpleGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchA() {
-        final SimpleGraph simpleGraph = new SimpleGraphBuilder().build();
+        final IGraph simpleGraph = new SimpleGraphBuilder().build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode nodeA = new GraphNode(new NodeName("A"));
@@ -47,7 +48,7 @@ public class SimpleGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchB() {
-        final SimpleGraph simpleGraph = new SimpleGraphBuilder().build();
+        final IGraph simpleGraph = new SimpleGraphBuilder().build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode nodeB = new GraphNode(new NodeName("B"));
@@ -86,7 +87,7 @@ public class SimpleGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchC() {
-        final SimpleGraph simpleGraph = new SimpleGraphBuilder().build();
+        final IGraph simpleGraph = new SimpleGraphBuilder().build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode nodeC = new GraphNode(new NodeName("C"));
@@ -125,7 +126,7 @@ public class SimpleGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchD() {
-        final SimpleGraph simpleGraph = new SimpleGraphBuilder().build();
+        final IGraph simpleGraph = new SimpleGraphBuilder().build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode nodeD = new GraphNode(new NodeName("D"));
@@ -157,7 +158,7 @@ public class SimpleGraphSearchBreadthFirstTest {
 
     @Test
     public void testSearchE() {
-        final SimpleGraph simpleGraph = new SimpleGraphBuilder().build();
+        final IGraph simpleGraph = new SimpleGraphBuilder().build();
         final IGraphSearch search = new GraphSearchBreadthFirst(simpleGraph);
 
         final IGraphNode nodeD = new GraphNode(new NodeName("E"));

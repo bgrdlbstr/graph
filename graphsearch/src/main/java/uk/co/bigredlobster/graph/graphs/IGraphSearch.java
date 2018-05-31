@@ -1,4 +1,4 @@
-package uk.co.bigredlobster.graph.searchAlgos;
+package uk.co.bigredlobster.graph.graphs;
 
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.microtypes.HasVisited;

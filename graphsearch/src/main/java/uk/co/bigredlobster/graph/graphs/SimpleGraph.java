@@ -1,18 +1,25 @@
-package uk.co.bigredlobster.graph;
+package uk.co.bigredlobster.graph.graphs;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
+import uk.co.bigredlobster.graph.IGraph;
 import uk.co.bigredlobster.graph.nodes.IGraphNode;
 
 import java.util.Objects;
 
-public class GridGraphWithWalls {
-    final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges;
+public class SimpleGraph implements IGraph {
+    private final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges;
 
-    public GridGraphWithWalls(final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges) {
+    SimpleGraph(final ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges) {
         this.edges = edges;
     }
 
+    @Override
+    public ImmutableMap<IGraphNode, ImmutableSet<IGraphNode>> edges() {
+        return edges;
+    }
+
+    @Override
     public ImmutableSet<IGraphNode> neighbours(final IGraphNode current) {
         return edges.get(current);
     }
@@ -29,7 +36,7 @@ public class GridGraphWithWalls {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SimpleGraph that = (SimpleGraph) o;
-        return Objects.equals(edges, that.edges());
+        return Objects.equals(edges, that.edges);
     }
 
     @Override

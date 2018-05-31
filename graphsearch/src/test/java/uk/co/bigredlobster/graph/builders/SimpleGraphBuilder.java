@@ -2,9 +2,10 @@ package uk.co.bigredlobster.graph.builders;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import uk.co.bigredlobster.graph.SimpleGraph;
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
+import uk.co.bigredlobster.graph.IGraph;
+import uk.co.bigredlobster.graph.graphs.GraphFactory;
 import uk.co.bigredlobster.graph.nodes.GraphNode;
+import uk.co.bigredlobster.graph.nodes.IGraphNode;
 import uk.co.bigredlobster.graph.nodes.factory.INodeFactory;
 import uk.co.bigredlobster.graph.nodes.factory.NodeFactory;
 import uk.co.bigredlobster.microtypes.NodeName;
@@ -13,7 +14,7 @@ public class SimpleGraphBuilder {
 
     private final INodeFactory factory = new NodeFactory();
 
-    public SimpleGraph build() {
+    public IGraph build() {
 
         final ImmutableMap.Builder<IGraphNode, ImmutableSet<IGraphNode>> builder = ImmutableMap.builder();
 
@@ -41,6 +42,6 @@ public class SimpleGraphBuilder {
                 factory.createOrGet(new GraphNode(new NodeName("C")))
         ));
 
-        return new SimpleGraph(builder.build());
+        return GraphFactory.getSimpleGraph(builder.build());
     }
 }

@@ -10,8 +10,8 @@ import java.util.Set;
 public class GridGraphNode implements IGraphNode {
 
     private final IGraphNode graphNode;
-    private final PositionX x;
-    private final PositionY y;
+    public final PositionX x;
+    public final PositionY y;
 
     public GridGraphNode(final IGraphNode graphNode, final PositionX x, final PositionY y) {
         this.graphNode = graphNode;

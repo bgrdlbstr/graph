@@ -17,12 +17,10 @@ class GridGraphWithWalls extends ForwardingGraph implements IGraph {
     static class Builder extends BuilderBase {
 
         private final List<WallPosition> walls;
-//        private GridGraph.Builder gridGraphBuilder;
 
         Builder(final int width, final int height, final List<WallPosition> walls) {
             super(width, height);
             this.walls = checkNotNull(walls);
-//            gridGraphBuilder = new GridGraph.Builder(width, height);
         }
 
         @Override

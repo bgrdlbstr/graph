@@ -1,14 +1,14 @@
-package uk.co.bigredlobster.graph;
+package uk.co.bigredlobster.homegrownGraph;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import org.junit.Test;
-import uk.co.bigredlobster.graph.graphs.GraphFactory;
-import uk.co.bigredlobster.graph.graphs.IGraphSearch;
-import uk.co.bigredlobster.graph.nodes.GraphNode;
-import uk.co.bigredlobster.graph.nodes.GridGraphNode;
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
-import uk.co.bigredlobster.graph.searchAlgos.GraphSearchBreadthFirst;
+import uk.co.bigredlobster.homegrownGraph.graphs.GraphFactory;
+import uk.co.bigredlobster.homegrownGraph.graphs.IGraphSearch;
+import uk.co.bigredlobster.homegrownGraph.nodes.GraphNode;
+import uk.co.bigredlobster.homegrownGraph.nodes.GridGraphNode;
+import uk.co.bigredlobster.homegrownGraph.nodes.IGraphNode;
+import uk.co.bigredlobster.homegrownGraph.searchAlgos.GraphSearchBreadthFirst;
 import uk.co.bigredlobster.microtypes.HasVisitedAndWhen;
 import uk.co.bigredlobster.microtypes.NodeName;
 import uk.co.bigredlobster.microtypes.WallPosition;
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static uk.co.bigredlobster.graph.TestWalls.walls1;
+import static uk.co.bigredlobster.homegrownGraph.TestWalls.walls1;
 
 public class GridGraphWithWallsSearchBreadthFirstTest {
 

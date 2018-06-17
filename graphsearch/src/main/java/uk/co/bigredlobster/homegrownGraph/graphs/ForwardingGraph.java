@@ -1,10 +1,10 @@
-package uk.co.bigredlobster.graph.graphs;
+package uk.co.bigredlobster.homegrownGraph.graphs;
 
 import com.google.common.collect.ForwardingObject;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import uk.co.bigredlobster.graph.IGraph;
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
+import uk.co.bigredlobster.homegrownGraph.IGraph;
+import uk.co.bigredlobster.homegrownGraph.nodes.IGraphNode;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 

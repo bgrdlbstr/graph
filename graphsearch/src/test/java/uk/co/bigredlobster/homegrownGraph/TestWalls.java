@@ -1,4 +1,4 @@
-package uk.co.bigredlobster.graph;
+package uk.co.bigredlobster.homegrownGraph;
 
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;

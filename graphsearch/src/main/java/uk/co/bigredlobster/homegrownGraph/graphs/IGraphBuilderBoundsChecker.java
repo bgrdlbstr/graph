@@ -1,6 +1,6 @@
-package uk.co.bigredlobster.graph.graphs;
+package uk.co.bigredlobster.homegrownGraph.graphs;
 
-import uk.co.bigredlobster.graph.IGraph;
+import uk.co.bigredlobster.homegrownGraph.IGraph;
 
 public interface IGraphBuilderBoundsChecker {
     boolean inBounds(final int x, final int y);

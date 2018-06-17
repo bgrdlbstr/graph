@@ -1,4 +1,4 @@
-package uk.co.bigredlobster.graph.nodes;
+package uk.co.bigredlobster.homegrownGraph.nodes;
 
 import com.google.common.collect.ImmutableSet;
 import uk.co.bigredlobster.microtypes.NodeName;

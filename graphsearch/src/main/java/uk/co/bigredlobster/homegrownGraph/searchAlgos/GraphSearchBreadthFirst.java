@@ -1,8 +1,8 @@
-package uk.co.bigredlobster.graph.searchAlgos;
+package uk.co.bigredlobster.homegrownGraph.searchAlgos;
 
-import uk.co.bigredlobster.graph.IGraph;
-import uk.co.bigredlobster.graph.graphs.IGraphSearch;
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
+import uk.co.bigredlobster.homegrownGraph.IGraph;
+import uk.co.bigredlobster.homegrownGraph.graphs.IGraphSearch;
+import uk.co.bigredlobster.homegrownGraph.nodes.IGraphNode;
 import uk.co.bigredlobster.microtypes.HasVisited;
 import uk.co.bigredlobster.microtypes.HasVisitedAndWhen;
 import uk.co.bigredlobster.microtypes.WhenVisited;

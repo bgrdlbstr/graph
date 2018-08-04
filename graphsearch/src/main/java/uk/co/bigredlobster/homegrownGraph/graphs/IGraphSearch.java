@@ -1,7 +1,6 @@
-package uk.co.bigredlobster.graph.graphs;
+package uk.co.bigredlobster.homegrownGraph.graphs;
 
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
-import uk.co.bigredlobster.microtypes.HasVisited;
+import uk.co.bigredlobster.homegrownGraph.nodes.IGraphNode;
 import uk.co.bigredlobster.microtypes.HasVisitedAndWhen;
 
 import java.util.Map;

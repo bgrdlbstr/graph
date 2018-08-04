@@ -1,6 +1,6 @@
-package uk.co.bigredlobster.graph.graphs;
+package uk.co.bigredlobster.homegrownGraph.graphs;
 
-import uk.co.bigredlobster.graph.IGraph;
+import uk.co.bigredlobster.homegrownGraph.IGraph;
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;
 import uk.co.bigredlobster.microtypes.WallPosition;

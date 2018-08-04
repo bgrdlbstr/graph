@@ -1,13 +1,13 @@
-package uk.co.bigredlobster.graph.graphs;
+package uk.co.bigredlobster.homegrownGraph.graphs;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import uk.co.bigredlobster.graph.IGraph;
-import uk.co.bigredlobster.graph.nodes.GraphNode;
-import uk.co.bigredlobster.graph.nodes.GridGraphNode;
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
-import uk.co.bigredlobster.graph.nodes.factory.INodeFactory;
-import uk.co.bigredlobster.graph.nodes.factory.NodeFactory;
+import uk.co.bigredlobster.homegrownGraph.IGraph;
+import uk.co.bigredlobster.homegrownGraph.nodes.GraphNode;
+import uk.co.bigredlobster.homegrownGraph.nodes.GridGraphNode;
+import uk.co.bigredlobster.homegrownGraph.nodes.IGraphNode;
+import uk.co.bigredlobster.homegrownGraph.nodes.factory.INodeFactory;
+import uk.co.bigredlobster.homegrownGraph.nodes.factory.NodeFactory;
 import uk.co.bigredlobster.microtypes.NodeName;
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;

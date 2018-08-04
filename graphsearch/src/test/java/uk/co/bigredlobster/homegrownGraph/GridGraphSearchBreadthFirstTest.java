@@ -1,13 +1,13 @@
-package uk.co.bigredlobster.graph;
+package uk.co.bigredlobster.homegrownGraph;
 
 import com.google.common.collect.Lists;
 import org.junit.Test;
-import uk.co.bigredlobster.graph.graphs.GraphFactory;
-import uk.co.bigredlobster.graph.graphs.IGraphSearch;
-import uk.co.bigredlobster.graph.nodes.GraphNode;
-import uk.co.bigredlobster.graph.nodes.GridGraphNode;
-import uk.co.bigredlobster.graph.nodes.IGraphNode;
-import uk.co.bigredlobster.graph.searchAlgos.GraphSearchBreadthFirst;
+import uk.co.bigredlobster.homegrownGraph.graphs.GraphFactory;
+import uk.co.bigredlobster.homegrownGraph.graphs.IGraphSearch;
+import uk.co.bigredlobster.homegrownGraph.nodes.GraphNode;
+import uk.co.bigredlobster.homegrownGraph.nodes.GridGraphNode;
+import uk.co.bigredlobster.homegrownGraph.nodes.IGraphNode;
+import uk.co.bigredlobster.homegrownGraph.searchAlgos.GraphSearchBreadthFirst;
 import uk.co.bigredlobster.microtypes.*;
 
 import java.util.ArrayList;

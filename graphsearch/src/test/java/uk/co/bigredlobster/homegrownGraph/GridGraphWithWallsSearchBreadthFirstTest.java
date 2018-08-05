@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static uk.co.bigredlobster.homegrownGraph.TestWalls.walls1;
+import static uk.co.bigredlobster.TestWalls.walls1;
 
 public class GridGraphWithWallsSearchBreadthFirstTest {
 

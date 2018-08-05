@@ -1,7 +1,7 @@
 package uk.co.bigredlobster.graph.basicGrid;
 
 
-import com.google.common.graph.MutableGraph;
+import com.google.common.graph.ImmutableGraph;
 import uk.co.bigredlobster.graph.shared.builder.GridGraphBuilder;
 import uk.co.bigredlobster.graph.shared.helpers.GraphVisualiser;
 import uk.co.bigredlobster.graph.shared.node.GraphNode;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GridGraph {
-    public final MutableGraph<GraphNode> graph;
+    public final ImmutableGraph<GraphNode> graph;
     public final GraphVisualiser graphVisualiser;
 
     public GridGraph(final int width, final int height) {

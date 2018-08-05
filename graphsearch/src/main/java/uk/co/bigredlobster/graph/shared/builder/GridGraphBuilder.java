@@ -2,6 +2,7 @@ package uk.co.bigredlobster.graph.shared.builder;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.graph.GraphBuilder;
+import com.google.common.graph.ImmutableGraph;
 import com.google.common.graph.MutableGraph;
 import uk.co.bigredlobster.graph.shared.node.GraphNode;
 import uk.co.bigredlobster.graph.shared.node.GridPosition;
@@ -31,9 +32,9 @@ public class GridGraphBuilder {
         nodes = makeNodes();
     }
 
-    public MutableGraph<GraphNode> build() {
+    public ImmutableGraph<GraphNode> build() {
         addEdges();
-        return graph;
+        return ImmutableGraph.copyOf(graph);
     }
 
     private ImmutableMap<GridPosition, GraphNode> makeNodes() {

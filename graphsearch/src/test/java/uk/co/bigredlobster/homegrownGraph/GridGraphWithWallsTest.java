@@ -15,7 +15,7 @@ import java.util.Set;
 import static com.google.common.collect.Lists.newArrayList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static uk.co.bigredlobster.homegrownGraph.TestWalls.walls1;
+import static uk.co.bigredlobster.TestWalls.walls1;
 
 public class GridGraphWithWallsTest {
 

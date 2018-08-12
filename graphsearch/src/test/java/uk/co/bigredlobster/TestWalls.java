@@ -1,4 +1,4 @@
-package uk.co.bigredlobster.homegrownGraph;
+package uk.co.bigredlobster;
 
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;
@@ -48,5 +48,34 @@ public class TestWalls {
             new WallPosition(new PositionX(21), new PositionY(6)),
             new WallPosition(new PositionX(21), new PositionY(7)),
             new WallPosition(new PositionX(21), new PositionY(8))
+    );
+
+    public static final List<WallPosition> walls2 = newArrayList(
+            new WallPosition(new PositionX(5), new PositionY(2)),
+            new WallPosition(new PositionX(6), new PositionY(2)),
+            new WallPosition(new PositionX(7), new PositionY(2)),
+            new WallPosition(new PositionX(8), new PositionY(2)),
+            new WallPosition(new PositionX(9), new PositionY(2)),
+            new WallPosition(new PositionX(10), new PositionY(2)),
+            new WallPosition(new PositionX(11), new PositionY(2)),
+            new WallPosition(new PositionX(12), new PositionY(2)),
+
+            new WallPosition(new PositionX(12), new PositionY(3)),
+            new WallPosition(new PositionX(12), new PositionY(4)),
+            new WallPosition(new PositionX(12), new PositionY(5)),
+            new WallPosition(new PositionX(12), new PositionY(6)),
+            new WallPosition(new PositionX(12), new PositionY(7)),
+            new WallPosition(new PositionX(12), new PositionY(8)),
+            new WallPosition(new PositionX(12), new PositionY(9)),
+            new WallPosition(new PositionX(12), new PositionY(10)),
+            new WallPosition(new PositionX(12), new PositionY(11)),
+
+            new WallPosition(new PositionX(11), new PositionY(11)),
+            new WallPosition(new PositionX(10), new PositionY(11)),
+            new WallPosition(new PositionX(9), new PositionY(11)),
+            new WallPosition(new PositionX(8), new PositionY(11)),
+            new WallPosition(new PositionX(7), new PositionY(11)),
+            new WallPosition(new PositionX(6), new PositionY(11)),
+            new WallPosition(new PositionX(5), new PositionY(11))
     );
 }

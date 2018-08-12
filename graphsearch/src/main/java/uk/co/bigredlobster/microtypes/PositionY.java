@@ -14,4 +14,7 @@ public class PositionY extends IntegerMicroType<Integer> {
         super(y);
     }
 
+    public PositionY(final PositionY y) {
+        this(y.value);
+    }
 }

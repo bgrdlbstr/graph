@@ -11,6 +11,7 @@ import uk.co.bigredlobster.microtypes.*;
 
 import java.util.List;
 
+@SuppressWarnings("UnstableApiUsage")
 class GridGraphWithCostBuilder {
     private final int width;
     private final int height;
@@ -19,7 +20,7 @@ class GridGraphWithCostBuilder {
     private final List<WallPosition> walls;
     private final List<CostPosition> costs;
 
-    public GridGraphWithCostBuilder(final int width, final int height, final List<WallPosition> walls, final List<CostPosition> costs) {
+    GridGraphWithCostBuilder(final int width, final int height, final List<WallPosition> walls, final List<CostPosition> costs) {
         this.width = width;
         this.height = height;
         this.walls = walls;
@@ -85,7 +86,7 @@ class GridGraphWithCostBuilder {
                 final CostPosition nodeCost = costs.stream()
                         .filter(cost -> cost.x.equals(edgeTo.x) && cost.y.equals(edgeTo.y))
                         .findFirst()
-                        .orElse(new CostPosition(edgeTo.x, edgeTo.y, new NodeCost(1)));
+                        .orElse(new CostPosition(edgeTo.x, edgeTo.y, NodeCost.ONE));
                 graph.putEdgeValue(
                         nodes.get(current),
                         nodes.get(edgeTo),

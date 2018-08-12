@@ -1,8 +1,8 @@
 package uk.co.bigredlobster.graph.search.breadthFirst;
 
 import com.google.common.collect.Streams;
-import uk.co.bigredlobster.graph.shared.helpers.DrawStyle;
 import uk.co.bigredlobster.graph.basicGridWithWalls.GridGraphWithWalls;
+import uk.co.bigredlobster.graph.shared.helpers.DrawStyle;
 import uk.co.bigredlobster.graph.shared.node.GraphNode;
 import uk.co.bigredlobster.microtypes.PositionX;
 import uk.co.bigredlobster.microtypes.PositionY;
@@ -78,7 +78,7 @@ public class SearchBreadthFirstWithPathAndEarlyExit {
         System.out.println(sb.toString());
     }
 
-    public List<GraphNode> reconstructPath(final Map<GraphNode, GraphNode> cameFrom, final GraphNode start, final GraphNode goal) {
+    private List<GraphNode> reconstructPath(final Map<GraphNode, GraphNode> cameFrom, final GraphNode start, final GraphNode goal) {
         final Deque<GraphNode> path = new ArrayDeque<>();
         GraphNode current = goal;
         while (!current.equals(start)) {

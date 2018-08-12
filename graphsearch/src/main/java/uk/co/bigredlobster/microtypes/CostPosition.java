@@ -2,8 +2,6 @@ package uk.co.bigredlobster.microtypes;
 
 import uk.co.bigredlobster.graph.shared.node.GridPosition;
 
-import java.util.Objects;
-
 public class CostPosition extends GridPosition {
     public final NodeCost cost;
 
@@ -12,18 +10,22 @@ public class CostPosition extends GridPosition {
         this.cost = cost;
     }
 
+    public CostPosition(final GridPosition position, final NodeCost cost) {
+        this(position.x, position.y, cost);
+    }
+
+    public CostPosition(final CostPosition costPosition) {
+        this(costPosition.x, costPosition.y, costPosition.cost);
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        CostPosition that = (CostPosition) o;
-        return Objects.equals(cost, that.cost);
+        return super.equals(o);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), cost);
+        return super.hashCode();
     }
 
     @Override

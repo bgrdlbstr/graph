@@ -6,5 +6,6 @@ public enum DrawStyle {
     PATH,
     NUMBERS,
     RAW,
-    FROM;
+    FROM,
+    COST_SO_FAR
 }

@@ -13,4 +13,8 @@ public class PositionX extends IntegerMicroType<Integer> {
     public PositionX(final int x) {
         super(Integer.valueOf(x));
     }
+
+    public PositionX(final PositionX x) {
+        this(x.value);
+    }
 }

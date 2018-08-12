@@ -17,6 +17,10 @@ public class GridPosition {
         this.y = y;
     }
 
+    public GridPosition(final GridPosition position) {
+        this(position.x, position.y);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

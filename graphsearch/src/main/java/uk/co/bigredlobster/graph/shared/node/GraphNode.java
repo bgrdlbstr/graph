@@ -12,6 +12,10 @@ public class GraphNode {
         this.position = position;
     }
 
+    public GraphNode(final GraphNode node) {
+        this(node.position);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
